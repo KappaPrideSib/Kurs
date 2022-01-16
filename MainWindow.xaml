@@ -1,0 +1,53 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="1004.65" Width="1077.5">
+    <Grid>
+        <WrapPanel x:Name="WrapGamePanels" HorizontalAlignment="Left" Height="796" VerticalAlignment="Center" Width="800" Margin="10,139,0,39"/>
+        <Button x:Name="btbuild" Content="Постройка города (-500 зол)" HorizontalAlignment="Left" Height="57" Margin="887,188,0,0" VerticalAlignment="Top" Width="160" Click="btbuild_Click" HorizontalContentAlignment="Center"/>
+        <Button x:Name="btroll" Content="Ход" HorizontalAlignment="Left" Height="75" Margin="386,44,0,0" VerticalAlignment="Top" Width="68" Click="btroll_Click" Foreground="{x:Null}" BorderBrush="{x:Null}">
+            <Button.Background>
+                <ImageBrush ImageSource="time.png" Stretch="Uniform"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btcancelbuild" Content="Закрыть меню постройки" HorizontalAlignment="Left" Margin="887,308,0,0" VerticalAlignment="Top" Width="160" Height="41" Click="btcancelbuild_Click"/>
+        <Label x:Name="lbroll" Content="0" HorizontalAlignment="Left" Height="114" Margin="459,20,0,0" VerticalAlignment="Top" Width="190" FontSize="76" FontWeight="Bold" Foreground="White"/>
+        <Label x:Name="lbzol1pl" Content="Label" HorizontalAlignment="Left" Height="47" Margin="946,697,-20,0" VerticalAlignment="Top" Width="144" FontSize="24" Foreground="White" FontWeight="Bold"/>
+        <Label x:Name="lbzol2pl" Content="Label" HorizontalAlignment="Left" Height="48" Margin="946,795,-10,0" VerticalAlignment="Top" Width="134" Foreground="White" FontSize="24" FontWeight="Bold"/>
+        <Button x:Name="btdel" Content="Cнести город (+250 зол)" HorizontalAlignment="Left" Height="53" Margin="887,250,0,0" VerticalAlignment="Top" Width="160" Click="btdel_Click"/>
+        <Button x:Name="btwarcreate" Content="Создать воина" HorizontalAlignment="Left" Height="56" Margin="887,413,0,0" VerticalAlignment="Top" Width="160" Click="btwarcreate_Click"/>
+        <Label Content="Меню Воинов" HorizontalAlignment="Left" Height="44" Margin="874,364,0,0" VerticalAlignment="Top" Width="186" HorizontalContentAlignment="Center" FontSize="22" Foreground="White" FontWeight="Bold"/>
+        <Label Content="Меню города" HorizontalAlignment="Left" Height="44" Margin="887,139,0,0" VerticalAlignment="Top" Width="160" HorizontalContentAlignment="Center" FontSize="22" Foreground="White" FontWeight="Bold"/>
+        <Button x:Name="btwarleft" Content="&lt;-" HorizontalAlignment="Left" Height="42" Margin="896,543,0,0" VerticalAlignment="Top" Width="40" Click="btwarleft_Click" FontWeight="Bold" FontSize="24"/>
+        <Button x:Name="btwarright" Content="-&gt;" HorizontalAlignment="Left" Height="42" Margin="997,543,0,0" VerticalAlignment="Top" Width="40" Click="btwarright_Click" FontWeight="Bold" FontSize="24"/>
+        <Button x:Name="btwarup" Content="-&gt;" HorizontalAlignment="Left" Height="43" Margin="946,490,0,0" VerticalAlignment="Top" Width="42" Click="btwarup_Click" RenderTransformOrigin="0.5,0.5" FontWeight="Bold" FontSize="24">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="btwardown" Content="-&gt;" HorizontalAlignment="Left" Height="43" Margin="944,597,0,0" VerticalAlignment="Top" Width="45" Click="btwardown_Click" RenderTransformOrigin="0.5,0.5" FontWeight="Bold" FontSize="24">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Label x:Name="lbtimer" Content="" HorizontalAlignment="Left" Height="87" Margin="918,887,0,0" VerticalAlignment="Top" Width="142" FontSize="28" FontWeight="Bold" Foreground="White"/>
+        <Slider x:Name="slvolume" HorizontalAlignment="Left" Height="24" Margin="887,858,0,0" VerticalAlignment="Top" Width="173" ValueChanged="slvolume_ValueChanged"/>
+        <Label x:Name="lbnickscnd" Content="" HorizontalAlignment="Left" Height="46" Margin="887,744,0,0" VerticalAlignment="Top" Width="175" Foreground="White" FontSize="20" FontWeight="Bold"/>
+        <Label x:Name="lbnickfst" Content="" HorizontalAlignment="Left" Height="35" Margin="885,662,0,0" VerticalAlignment="Top" Width="175" FontSize="20" FontWeight="Bold" Foreground="White"/>
+
+    </Grid>
+</Window>
